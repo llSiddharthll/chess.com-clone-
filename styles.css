@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 :root {
   --primary-color: #0b2027;
-  --secondary-color: #ffffffd9;
+  --secondary-color: #fff;
   --font-family: "Roboto", sans-serif;
   --poppins-font-family: "Poppins", sans-serif;
   --regular-font-weight: 400;
@@ -14,40 +14,124 @@
 body {
   background-color: #f2f2f2;
   font-family: var(--font-family);
-  margin: 0;
 }
 
-.wrapper {
+.navbar {
+  background-color: #fff;
+}
+
+.search-container {
+  position: relative;
   display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 18px;
+  position: absolute;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  border: none;
+  padding: 22px;
+  background-color: transparent;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.search-input::-moz-placeholder {
+  color: red;
+}
+
+.search-input::placeholder {
+  color: red;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: blue;
+  padding-left: 40px;
+}
+
+.search-input:focus + .search-icon {
+  left: 2px;
+  font-size: 14px;
+}
+
+.vertical-line {
+  border-left: 1px solid #ccc;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.nav-link,
+.navbar-brand {
+  color: black !important;
+  font-weight: var(--regular-font-weight);
+  font-family: var(--poppins-font-family);
 }
 
 #sidebar {
-  background: #312e2b;
-  color: white;
-  height: 100vh;
-  position: relative;
-  top: 0;
-  z-index: 1;
-}
-
-#secondary-sidebar {
-  background: #000000f1;
-  color: white;
   height: 100vh;
   width: 250px;
-  display: none;
   position: fixed;
+  z-index: 1;
   top: 0;
-  left: 130px;
-  z-index: 0;
-}
-
-.nav-link {
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
   color: white;
 }
 
-.nav-item.dropdown:hover #secondary-sidebar {
+#sidebar img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sidebar li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff !important;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff !important;
+}
+
+.dropdown-toggle:hover {
+  text-decoration: none;
 }
 
 #sidebar li a:hover {
@@ -59,6 +143,33 @@ body {
   margin-right: 10px;
 }
 
-.chess-icon {
-  width: 30px;
+#content {
+  margin-left: 250px;
+  padding: 16px;
+  transition: margin-left 0.5s;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #0b0720 !important;
+}
+#user-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50%;
 }

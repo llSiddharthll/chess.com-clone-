@@ -17,248 +17,124 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Chess Hub</title>
+    <title>Your Company</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div id="sidebar">
-        <p class="text-center text-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
           <img
-            src="./icons/favicon-32x32.adae7142.png"
-            alt=""
-            class="chess-icon"
+            src="icons/favicon-32x32.adae7142.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt="Logo"
           />
-          <span>Chess<small>.com</small></span>
-        </p>
-        <ul class="nav nav-pills flex-column mt-2">
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Play</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Play</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Computer</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Tournament</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">4 Players & Variants</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Leaderboard</a>
-                </li>
-              </ul>
+          CoinNex <span class="vertical-line"></span>
+        </a>
+        <button class="btn btn-primary" type="button" onclick="openNav()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Invest</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Withdraw</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <div class="search-container">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                class="form-control search-input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Puzzle</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Puzzle</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Puzzle Rush</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Puzzle Battle</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Daily Puzzle</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Custom Puzzle</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Learn</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Lessons</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Analysis</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Chessable Course</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Aimchess Training</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Insights</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Classroom</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Openings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Endgames</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Practice</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Watch</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <p class="text-white">Chess TV</p>
-              <p class="text-white">Streamer</p>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 2</a>
-                </li>
-              </ul>
-              <p class="text-white">Event</p>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 2</a>
-                </li>
-              </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-              <p class="text-white">Playing Now</p>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Player 2</a>
-                </li>
-              </ul>
+    <!-- Your page content goes here -->
+
+    <div id="sidebar">
+      <p class="text-center text-white">Your Name</p>
+      <ul class="nav nav-pills flex-column mt-2">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link"
+            ><i class="fas fa-rss"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Feed</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link"
+            ><i class="fas fa-search"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Explore</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link"
+            ><i class="fas fa-bell"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Notification</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link"
+            ><i class="fas fa-envelope"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Messages</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link"
+            ><i class="fas fa-question-circle"></i>
+            <span class="fs-4 m-sm-1 d-none d-sm-inline">Help</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <!-- Your page content goes here -->
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-white mt-3 ms-2">
+              <span class="text-secondary">Today:</span>
+              <span id="date"></span>
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">News</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Chess Today</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">News</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Articles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Top Players</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Chess Ranking</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Social</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Clubs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Forums</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Members</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Blogs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Coaches</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fa-users"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">More</span>
-            </a>
-            <!-- Secondary Sidebar Content -->
-            <div id="secondary-sidebar">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Library</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Explore</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Solo Chess</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Vision</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Vote Chess</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Mobile App</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ChessKid</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-cog"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Settings</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-question-circle"></i>
-              <span class="fs-4 m-sm-1 d-none d-sm-inline">Help</span>
-            </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
 

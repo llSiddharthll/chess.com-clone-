@@ -1,10 +1,13 @@
-export function Greet() {
-  alert("Hello, World");
-}
-
+import { renderHighlight } from "../Render/main.js";
+import { globalState } from "../index.js";
 // for each square
 function Square(color, id, piece) {
-  return { color, id, piece };
+  const highlight = function () {
+    renderHighlight(this.id);
+    this.highlighted = true;
+  };
+
+  return { color, id, piece, highlight };
 }
 
 function SquareRow(rowId) {

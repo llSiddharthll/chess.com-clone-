@@ -1,175 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
-:root {
-  --primary-color: #0b2027;
-  --secondary-color: #fff;
-  --font-family: "Roboto", sans-serif;
-  --poppins-font-family: "Poppins", sans-serif;
-  --regular-font-weight: 400;
-  --medium-font-weight: 500;
-  --semi-bold-font-weight: 600;
-  --bold-font-weight: 700;
-}
-
 body {
-  background-color: #f2f2f2;
-  font-family: var(--font-family);
+  background-color: #302e2b;
 }
 
-.navbar {
-  background-color: #fff;
-}
-
-.search-container {
-  position: relative;
+#root {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
 }
 
-.search-icon {
-  font-size: 18px;
-  position: absolute;
-  left: 2px;
-  transition: all 0.3s ease;
+.squareRow {
+  display: flex;
 }
 
-.search-input {
-  border: none;
-  padding: 22px;
-  background-color: transparent;
-  box-shadow: none;
-  transition: all 0.3s ease;
-  font-size: 16px;
+.square {
+  width: 75px;
+  height: 75px;
 }
 
-.search-input::-moz-placeholder {
-  color: red;
+.white {
+  background-color: #eeeed2;
 }
 
-.search-input::placeholder {
-  color: red;
+.black {
+  background-color: #769656;
 }
 
-.search-input:focus {
-  outline: none;
-  box-shadow: none;
-  background-color: transparent;
-  color: blue;
-  padding-left: 40px;
+.highlightYellow {
+  background: #f7f769;
 }
 
-.search-input:focus + .search-icon {
-  left: 2px;
-  font-size: 14px;
+.piece {
+  width: 100%;
+  cursor: pointer;
 }
 
-.vertical-line {
-  border-left: 1px solid #ccc;
-  height: 30px;
-  margin: 0 10px;
+.captureColor {
+  background-color: #ee4b2b;
 }
 
-.user-image {
-  width: 30px;
-  height: 30px;
+.highlight {
+  width: 32px;
+  display: block;
+  height: 32px;
+  margin: auto;
+  margin-top: 20px;
   border-radius: 50%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.17);
 }
 
-.navbar-nav .nav-item {
-  margin-right: 15px;
-}
-
-.nav-link,
-.navbar-brand {
-  color: black !important;
-  font-weight: var(--regular-font-weight);
-  font-family: var(--poppins-font-family);
-}
-
-#sidebar {
-  height: 100vh;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+}
+
+.blur {
+  filter: blur(20px);
+}
+
+.modal p {
+  font-family: sans-serif;
+  font-size: 35px;
+  padding: 4px 8px;
+  background-color: red;
   color: white;
 }
 
-#sidebar img {
-  border-radius: 50%;
-  margin-bottom: 20px;
-  width: 80px;
-  height: 80px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.modal img {
+  box-sizing: border-box;
+  border: 5px solid transparent;
+  width: 24%;
 }
 
-#sidebar li a {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #ffffff !important;
-}
-
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #ffffff !important;
-}
-
-.dropdown-toggle:hover {
-  text-decoration: none;
-}
-
-#sidebar li a:hover {
-  color: #f1f1f1;
-  background-color: #007bff;
-}
-
-#sidebar i {
-  margin-right: 10px;
-}
-
-#content {
-  margin-left: 250px;
-  padding: 16px;
-  transition: margin-left 0.5s;
-}
-
-.dropdown-menu .dropdown-item {
-  color: #0b0720 !important;
-}
-#user-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-}
-
-.icon {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-shape {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 12px;
-  border-radius: 50%;
+.modal img:hover {
+  border: 5px solid yellow;
+  cursor: pointer;
 }

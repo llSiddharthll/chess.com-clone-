@@ -1,6 +1,6 @@
 import * as piece from "../Data/pieces.js";
 import { ROOT_DIV } from "../Helper/constants.js";
-import { globalState } from "../index.js";
+import { globalState } from "../js/chess.js";
 
 const globalPiece = new Object();
 

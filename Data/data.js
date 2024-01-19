@@ -1,5 +1,5 @@
-import { renderHighlight } from "../Render/main.js";
-import { globalState } from "../index.js";
+import { renderHighlight } from "../../Render/main.js";
+import { globalState } from "../js/chess.js";
 // for each square
 function Square(color, id, piece) {
   const highlight = function () {
